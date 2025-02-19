@@ -1,0 +1,63 @@
+﻿.contact-form {
+    max-width: 900px;
+    margin: 90px auto; /* Centre le formulaire horizontalement avec un espace de 400px en haut */
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+    .contact-form h2 {
+        text-align: center;
+        color: #333;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-form label {
+        display: block;
+        margin-top: 15px;
+        font-size: 3.2rem;
+        font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 15px;
+        font-size: 2.2rem;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .contact-form textarea {
+        min-height: 250px; /* Définit la hauteur minimale de la zone de texte */
+    }
+
+    .contact-form button {
+        width: 100%;
+        background: #28a745; /* Couleur de fond du bouton */
+        color: white; /* Couleur du texte */
+        border: none;
+        padding: 15px;
+        font-size: 2.2rem;
+        cursor: pointer; /* Change le curseur pour indiquer que le bouton est cliquable */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+        .contact-form button:hover {
+            background: #218838; /* Change la couleur au survol */
+        }
+
+.error {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+}

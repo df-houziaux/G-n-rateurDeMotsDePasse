@@ -1,0 +1,95 @@
+﻿/* ========================== 
+   STRUCTURE GLOBALE 
+========================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que la page prend au moins toute la hauteur de l'écran */
+}
+
+/* Le contenu principal prend l'espace restant */
+.content {
+    flex: 1; /* Permet au contenu de remplir l'espace disponible */
+}
+
+/* ========================== 
+   FOOTER 
+========================== */
+.footer {
+    background-color: #212529;
+    color: white;
+    padding: 10px 0;
+    margin-top: auto; /* Pousse le footer en bas naturellement */
+    width: 100%;
+}
+
+    /* Conteneur du footer */
+    .footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Logo */
+    .footer .logo-footer {
+        max-width: 200px;
+        margin-left: -200px;
+    }
+
+    /* Texte */
+    .footer p {
+        margin: 0;
+        font-size: 18px;
+    }
+
+.col-md-4 {
+    width: auto !important;
+}
+
+/* Alignement des informations de contact, icônes et bouton à droite */
+.footer .col-md-4:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Icônes sociales */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+    /* Image des icônes */
+    .social-links img {
+        width: 40px;
+        height: 40px;
+    }
+
+/* Bouton contact */
+.contact-button {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.btn-contact {
+    display: inline-block;
+    background-color: #f8d210;
+    color: #212529;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Option : Fixer le footer si on veut qu'il soit toujours visible */
+.footer.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

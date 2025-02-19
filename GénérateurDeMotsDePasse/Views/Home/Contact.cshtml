@@ -1,0 +1,56 @@
+﻿@model GénérateurDeMotsDePasse.Models.ContactViewModel
+
+
+<h2 class="text-center">📩 Contactez-moi</h2>
+
+<div class="container mt-5">
+    <form id="contact-form" class="contact-form" asp-action="SendContactForm" method="post">
+        <label for="prénom">
+            👤 Prénom :
+            <input type="text" id="prénom" asp-for="Prénom" required>
+            <span asp-validation-for="Prénom" class="error-message text-danger"></span>
+        </label>
+
+        <label for="nom">
+            👤 Nom :
+            <input type="text" id="nom" asp-for="Nom" required>
+            <span asp-validation-for="Nom" class="error-message text-danger"></span>
+        </label>
+
+        <label for="email">
+            📧 Email :
+            <input type="email" id="email" asp-for="Email" required>
+            <span asp-validation-for="Email" class="error-message text-danger"></span>
+        </label>
+
+        <label for="sujet">
+            📝 Sujet :
+            <input type="text" id="sujet" asp-for="Sujet" required>
+            <span asp-validation-for="Sujet" class="error-message text-danger"></span>
+        </label>
+
+        <label for="message">
+            💬 Message :
+            <textarea id="message" asp-for="Message" rows="5" required></textarea>
+            <span asp-validation-for="Message" class="error-message text-danger"></span>
+        </label>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+</div>
+
+<link rel="stylesheet" href="~/css/contact.css">
+<script src="~/js/contact.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
